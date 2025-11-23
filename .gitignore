@@ -1,0 +1,8 @@
+.env
+oss.db
+__pycache__/
+*.pyc
+.db
+.vscode/
+.idea/
+.DS_Store
