@@ -1,4 +1,4 @@
-# OSS Security Backend API  
+# OSS Project Backend API  
 FastAPI + SQLite + Anthropic Claude + Docker
 
 This project is a backend API server for OSS project analysis and summarization automation.
