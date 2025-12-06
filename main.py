@@ -1,16 +1,18 @@
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from models import User, Project, Summary
 from database import Base, engine
+from summarize import router as summarize_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+
 
 # 테이블 자동 생성
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="OSS Backend API with Claude")
-
+app.include_router(summarize_router)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
