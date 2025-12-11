@@ -7,10 +7,11 @@ load_dotenv()
 
 CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY")
 
-# ✔️ 너의 콘솔에서 쓰는 실제 모델명
+# 콘솔에서 쓰는 실제 모델명
 CLAUDE_MODEL = "claude-sonnet-4-20250514"
 
 def call_claude_api(text: str) -> str:
+
     logging.info("[Claude] 호출 시작")
     logging.info(f"[Claude] 요청 텍스트 길이: {len(text)}")
 

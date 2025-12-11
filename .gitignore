@@ -1,4 +1,5 @@
 .env
+*.env
 oss.db
 __pycache__/
 *.pyc

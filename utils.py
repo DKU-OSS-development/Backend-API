@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=".env")
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY","leeon_secret_key_12345")
 ALGORITHM = "HS256"
 
 def hash_password(pw: str):
